@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sobre | Icaro's Café</title>
+
+    <style>
+        #header{ /*imagem de fundo, altura do cabecalho*/
+            background-image: url(media/copo-cafecompleto.jpg);
+            height: 18vh; /* Definindo a altura */
+        }
+
+        .interface2 .about-two{ /*imagem de fundo, posicao da imagem, cor do texto*/
+            background-image: url(media/mesa-cafe.jpg);
+            background-position: right, right;
+            color: #EAEBE5;
+        }
+        
+        #main .interface2 p{ /*tamanho da fonte, espacamento interno, altura da linha*/
+            font-size: 1.3em;
+            padding: 5% 0% 5% 45%;
+            line-height: 1.5;
+        }
+
+        /* Estilo do botão*/
+        #tema {
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            background: var(--white);
+        }
+
+    </style>
+
+</head>
+<body>
+    <header id="header"> <!--cabecalho-->
+        <section class="interface" id="home"> <!--definir tamanho e cores-->
+            <div class="flex"> <!--cobre o conteudo flex-->
+                <div class="logo"><!--div para inserir a logo-->
+                    <a href="#home">
+                        <h1>Icaro's <br>Café</h1>
+                    </a>
+                </div>
+                <nav class="menu-desktop"> <!--nav para o menu-->
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="cardapio.html">cardápio</a></li>
+                        <li><a href="sobre.html">sobre</a></li>
+                        <li><a href="mais.html">saiba mais</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main id="main"> <!--conteudo principal-->
+        <section class="interface1" id="about"> <!--interface para definir tamanho e cor-->
+            <div class="about-one"> <!--div para box1 que vai guardar texto-->
+                <h2>Sobre nós</h2>
+                <p>
+                    Nossa jornada começou com a paixão por cafés especiais e o desejo de criar um espaço que fosse muito mais que um lugar para tomar um espresso – um verdadeiro ponto de encontro para amigos, estudos e momentos de tranquilidade.
+                </p>
+            </div>
+        </section> <!--interface-->
+
+        <section class="interface2" id=""> <!--interface para definir tamanho e cor-->
+            <div class="about-two"> <!--div para box2 que vai guardar texto-->
+                <p>
+                    Aqui, selecionamos os melhores grãos de pequenos produtores, torrados com cuidado artesanal, para garantir um sabor único em cada bebida. Nossos baristas são treinados para transformar seu café em uma experiência, seja no clássico cappuccino, no cold brew refrescante ou em nossas criações exclusivas.
+                </p>
+            </div>
+        </section> <!--interface2-->
+
+        <section class="interface1" id=""> <!--interface para definir tamanho e cor-->
+            <div class="about-three"> <!--div para box3 que vai guardar texto-->
+                <p>
+                    Além do café, oferecemos um cardápio de delícias caseiras: pães frescos, bolos feitos diariamente e opções saudáveis para acompanhar sua pausa perfeita.
+                    <br>
+                    <br>
+                    Valorizamos a sustentabilidade, usando embalagens ecológicas e apoiando práticas justas de comércio. Icaro's Café é mais que uma cafeteria – é um pedacinho de aconchego no seu dia.
+                </p>
+            </div>
+        </section> <!--interface-->
+    </main>
+
+    <footer id="footer"> <!--rodape-->
+        <section class="interface"><!--definir tamanho e cor-->
+            <h2><a href="#home">Icaro's Café</a></h2>
+            <p>Desenvolvido por <a href="#">Adriano Ocampos</a></p>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

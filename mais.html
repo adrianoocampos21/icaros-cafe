@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Icaro's Café</title>
+
+    <!--link para usar icones da cloudflare-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        #header{ /*cabecalho para definir background e altura*/
+        background-image: url(media/copo-cafecompleto.jpg);
+        height: 18vh;
+        }
+
+        /* Estilos específicos da página de contato */
+        .contact-section {
+            background-color: var(--white);
+            color: var(--red);
+            display: grid;
+            max-width: 1000px;
+            margin: auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        #cor1{
+            background-color: var(--black);;
+        }
+
+        #cor2{
+            background-color: var(--red);
+        }
+
+        #cor3{
+            background-color: var(--black);
+        }
+
+        .contact-card h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-card p, .contact-card address {
+            margin-bottom: 0.5rem;
+            font-style: normal;
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--orange);
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .opening-hours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            color: var(--white);
+        }
+        
+        .opening-hours strong {
+            color: var(--primary);
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header"> <!-- cabecalho do site -->
+        <section class="interface" id="home"> <!-- interface para definir padroes de tamanho-->
+            <div class="flex"> <!-- div para elementos que serao flex-->
+                <div class="logo"> <!-- div para colocar a logo-->
+                    <a href="#home">
+                        <h1>Icaro's <br>Café</h1>
+                    </a>
+                </div> <!-- logo -->
+                <nav class="menu-desktop"> <!-- menu de navegacao do site -->
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="cardapio.html">cardápio</a></li>
+                        <li><a href="sobre.html">sobre</a></li>
+                        <li><a href="mais.html">saiba mais</a></li>
+                    </ul>
+                </nav> <!-- menu-desktop -->
+            </div> <!-- flex -->
+        </section> <!-- interface -->
+    </header>
+
+    <main class="contact-section">
+        <div class="contact-info">
+            
+            <div class="contact-card" id="cor1">
+                <h3>Endereço</h3>
+                <address>
+                    Rua Aroma de Café, 123<br>
+                    Bairro Saboroso<br>
+                    Porto Alegre - Partenon<br>
+                    CEP: 01234-567
+                </address>
+            </div>
+            
+            <div class="contact-card" id="cor2">
+                <h3>Horário de Funcionamento</h3>
+                <div class="opening-hours">
+                    <strong>Terça a Sexta:</strong>
+                    <span>7:30 - 20:00</span>
+                    
+                    <strong>Sábado e Domingo:</strong>
+                    <span>9:00 - 20:00</span>
+                </div>
+            </div>
+            
+            <div class="contact-card" id="cor3">
+                <h3>Contatos</h3>
+                <p><strong>Telefone:</strong> (51) 9876-5432</p>
+                <p><strong>WhatsApp:</strong> (51) 9876-5432</p>
+                <p><strong>Email:</strong> contato@icaroscafe.com.br</p>
+                
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658440781!3d-23.565734367638957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <footer id="footer"> <!--rodapé da pagina, interface para tamanho e cores, titulo e paragrafo com link vazio-->
+        <section class="interface">
+            <h2><a href="#home">Icaro's Café</a></h2>
+            <p>Desenvolvido por <a href="#">Adriano Ocampos</a></p>
+        </section>
+    </footer><!--footer-->
+    
+    <!-- Ícones do Font Awesome
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+    -->
+</body>
+</html>

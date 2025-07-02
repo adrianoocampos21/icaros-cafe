@@ -1,0 +1,243 @@
+
+/* FONTES */
+/* Importando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Lexend+Tera:wght@100..900&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
+
+
+/* CORES */
+/* Adicionando a paleta de cores em variaveis, para utilizar dentro do código CSS */
+:root{
+--white: #EAEBE5;
+--orange: #D98218;
+--lightorange: #F2AC57;
+--marrom: #8C7A64;
+--red: #8C251C;
+--black: #332B29;
+}
+
+/* Retirando estilo padrão do HTML */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white);
+}
+
+.interface{
+    max-width: 1000px; /* Limitando o conteudo a 1000px de largura */
+    margin: auto; /* Posicionando tudo ao centro da tela */
+    padding: 20px 10px; /* Distanciando o conteudo da borda*/
+    font-family: "IM Fell Double Pica", "Noto Serif"; /* Adicionando fonte */
+}
+
+#header{
+    background-image: url(media/cafe-principal.jpg); /* Definindo uma imagem como fundo */
+    background-repeat: no-repeat; /* Evitando que a img se repita */
+    background-size: cover; /* A img fica parada */
+    background-position: center, center; /* posicionadno a img no centro da tela */
+    max-width: 100%; /* Definindo largura  máxima */
+    height: 70vh; /* Definindo a altura */
+}
+
+#header .flex{
+    display: flex; /* tornando os elementos flexiveis */
+    justify-content: space-between; /* Posicionando os elementos nas extremidades */
+}
+
+#header .logo h1{
+    color: var(--red); /* Cor do texto */
+    text-shadow: 0px 0px 5px var(--white); /* Sombra do texto */
+    font-style: italic; /* Estilo do texto */
+    font-size: 2.8em; /* Tamanho do texto */
+
+    display: inline-block; /* É necessário para usar a propriedade !trasnform! */
+    transition: 1.01s; /* Tempo de transição dessa configuração para a configuração !hover! */
+}
+
+#header h1:hover{ /*Aplica um efeito quando passa o mouse em cima */
+    transform: scale(1.1); /* Aumentando a escala do elemento enquanto em !hover! */
+}
+
+#header .menu-desktop{
+    display: flex; /* tornando os elementos flexiveis */
+    flex-direction: row; /* direção dos elementos em linha */
+}
+
+.menu-desktop ul li{
+    display: inline-block; /* trocando a herança de !flex! para !block! parcial */
+    margin: 5px 10px; /* Inserindo espaço externo */
+    list-style: none; /* Retirando estilo padrão das !listas! */
+
+}
+
+.menu-desktop a{ /* tamahno da fonte, espaco interno, cor, cor de fundo, sem-decoracao, borda, sombra */
+    font-size: 1.4em; /*  */
+    padding: 0 20px; /*  */
+
+    color: var(--red); /*  */
+    background-color: var(--white);
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+
+    display: inline-block; /* display; inline-block; é necessário para usar a propriedade !trasnform! */
+    transition: 0.5s; /* tempo de transicao quando for hover */
+}
+
+.menu-desktop a:hover{ /* mudancas quando passar o mouse, tamanho, cor */
+    transform: scale(1.05); 
+    color: var(--red);
+    background-color: var(--lightorange);
+}
+
+
+/* MAIN*/
+#main { /* fonte usada dentro do main */
+    font-family: "IM Fell Double Pica", "Noto Serif", sans-serif;
+}
+
+
+/* INTERFACE1 */
+#main .interface1{ /* cor de fundo, espacamento interno */
+    background-color: var(--red);
+    padding: 50px 10%;
+}
+
+.tema-alt1 {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.tema-alt2{
+    background-color: var(--orange) !important;
+    color: var(--white) !important;
+}
+
+
+#main .interface1 h2{ /* tamanho da fonte, cor, espacamento interno acima */
+    font-size: 2.7em;
+    color: var(--red);
+    padding-top: -2%;
+}
+
+#main .interface1 p{ /* tamanho da fonte, espacamento interno, altura da linha */
+    font-size: 1.3em;
+    padding: 3% 5%;
+    line-height: 1.5;
+}
+
+.interface1 .about-one{ /* cor de fundo, borda, largura maxima, altura minima, centralizar, espacamento interno, texto no centro, cor, sombra */
+    background-color: var(--white);
+    border-radius: 10px;
+    max-width: 1000px;
+    min-height: 370px;
+    margin: auto;
+    padding: 4% 15%;
+
+    text-align: center;
+    color: var(--black);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+}
+
+
+/* INTERFACE2 */
+#main .interface2{ /* cor de fundo, espacamento interno */
+    background-color: var(--marrom);
+    padding: 50px 10%;
+}
+
+#main .interface2 p{ /* tamanho da fonte, espacamento interno, altura da linha */
+    font-size: 1.3em;
+    padding: 5% 43% 5% 0%;
+    line-height: 1.5;
+}
+
+.interface2 .about-two{ /* imagem de fundo, nao repetir, imagem fixa, borda, largura maxima, altura minima, centralizar, espacamento interno, cor, sombra */
+    background-image: url(media/copo-cafe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    max-width: 1000px;
+    min-height: 370px;
+    margin: auto;
+    padding: 6% 5%;
+
+    color: var(--black);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+}
+
+.img-cardapio legend{
+    color: var(--orange);
+}
+
+#main .interface1 p{ /* tamanho da fonte, espacamento interno, altura da linha */
+    font-size: 1.3em;
+    padding: 2% 5%;
+    line-height: 1.5;
+}
+
+.interface1 .about-three, .contato{ /* cor de fundo, borda, largura maxima, altura minima, centralizar, espacamento interno, texto no centro, cor, sombra */
+    background-color: var(--white);
+    border-radius: 10px;
+    max-width: 1000px;
+    min-height: 370px;
+    margin: auto;
+    padding: 4% 15%;
+
+    text-align: center;
+    color: var(--black);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+}
+
+.interface1 .endereco{
+    background-color: var(--black);
+    border-radius: 10px;
+    max-width: 380px;
+    min-height: 150px;
+    margin: auto;
+    padding: 2% 5%;
+
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+}
+
+.interface1 .endereco p{
+    color: var(--white);
+}
+
+.interface1 .endereco svg{
+    color: var(--lightorange);
+}
+
+/* FOOTER */
+#footer{ /*cor de fundo*/
+    background-color: var(--white);
+}
+
+#footer .interface{ /*cor de fundo, display flexivel, distancia do elementos nos cantos, espacamento interno*/
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+}
+
+#footer h2 a{ /*tirar decoracao padrao do link, cor*/
+    text-decoration: none;
+    color: var(--red);
+}
+
+#footer p, a{ /*tirar decoracao padrao do link, cor*/
+    text-decoration: none;
+    color: var(--black);
+}
+
+#footer p a:hover{ /*colocar linha abaixo do texto quando passar o mouse em cima*/
+    text-decoration: underline;
+}
+
+
+

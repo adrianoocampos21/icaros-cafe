@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home | Icaro's Café</title>
+
+    <style> /* Aplicando CSS interno*/
+        .interface1 .introducao{ /* aplicando cor de fundo, borda arredondada, largura maxima, margin auto para centralizar, padding para espacamento interno, texto centralizador, cor de texto e sombra externa*/
+            background-color: var(--white);
+            border-radius: 10px;
+            max-width: 900px;
+            margin: auto;
+            padding: 4% 15%;
+
+            text-align: center;
+            color: var(--black);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+        }
+
+        .interface2{
+            text-align: center;
+        }
+
+        .interface2 img{
+            width: 350px;
+            height: 200px;
+
+        }
+
+        legend{
+            color: var(--white);
+            font-size: 20px;
+            text-decoration: underline;
+            padding: 10px;
+        }
+
+        div.img-cardapio {
+            display: flex;
+            background-color: var(--black);
+            border-radius: 10px;
+            max-width: 800px;
+            max-height: 400px;
+            padding: 50px 0 0 0;
+        }
+
+        button{
+            font-size: 15px;
+            width: 70px;
+            height: 30px;
+            margin: 80px 20px 10px 10px;
+
+            color: var(--red);
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 3px 5px;
+        }
+
+        .interface2{ /* display flexivel, conteudo no centro(horizontal)*/
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .interface2 .video{ /* borde com raio, largura maxima, altura minima, espaco externo, cor de texto, sombra externa*/
+            border-radius: 10px;
+            max-width: 900px;
+            min-height: 370px;
+            margin: 0px;
+
+            color: var(--black);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+        }
+
+        /* Estilo do botão*/
+        #tema {
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            background: var(--white);
+        }
+    </style>
+
+</head>
+<body>
+    <header id="header"> <!-- cabecalho do site -->
+        <section class="interface" id="home"> <!-- interface para definir padroes de tamanho-->
+            <div class="flex"> <!-- div para elementos que serao flex-->
+                <div class="logo"> <!-- div para colocar a logo-->
+                    <a href="#home">
+                        <h1>Icaro's <br>Café</h1>
+                    </a>
+                </div> <!-- logo -->
+                <nav class="menu-desktop"> <!-- menu de navegacao do site -->
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="cardapio.html">cardápio</a></li>
+                        <li><a href="sobre.html">sobre</a></li>
+                        <li><a href="mais.html">saiba mais</a></li>
+                        <li></li><a onclick="mudaTema()" id="tema">&#9728; &#9789;</a></li>
+                    </ul>
+                </nav> <!-- menu-desktop -->
+            </div> <!-- flex -->
+        </section> <!-- interface -->
+    </header>
+
+    <main id="main" > <!-- conteudo principal, fundo da pagina -->
+        <section class="interface1" id="interface1"> <!-- interface para definir tamanho e cores-->
+                <div class="introducao"> <!-- div para criar um box onde ficara o texto-->
+                    <h2>Bem-vindo a Icaro's Café</h2>
+                    <p>
+                        "... Onde cada xícara conta uma história e cada aroma traz memórias!"
+                    </p>
+                </div>
+        </section> <!--interface-->
+
+        <section class="interface2" id="interface2"> <!-- interface para definir tamanho e cores-->
+                <video class="video" src="media/video-cafe.mp4" controls="play">
+                </video>
+        </section> <!--interface2-->
+
+        <section class="interface1" id="interface3"> <!--interface para definir tamanho e cor-->
+            <div class="about-one"> <!--div para box1 que vai guardar texto-->
+                <h2>Sobre nós</h2>
+                <p>
+                    Nossa jornada começou com a paixão por cafés especiais e o desejo de criar um espaço que fosse muito mais que um lugar para tomar um espresso – um verdadeiro ponto de encontro para amigos, estudos e momentos de tranquilidade.
+                </p>
+            </div>
+        </section> <!--interface-->
+
+        <section class="interface2" id="interface4"> <!--interface para definir tamanho e cor-->
+            <div class="about-two"> <!--div para box2 que vai guardar texto-->
+                <p>
+                    Aqui, selecionamos os melhores grãos de pequenos produtores, torrados com cuidado artesanal, para garantir um sabor único em cada bebida. Nossos baristas são treinados para transformar seu café em uma experiência, seja no clássico cappuccino, no cold brew refrescante ou em nossas criações exclusivas.
+                </p>
+            </div>
+        </section> <!--interface2-->
+
+        <section class="interface1" id="interface5"> <!--interface para definir tamanho e cor-->
+            <div class="about-three"> <!--div para box3 que vai guardar texto-->
+                <p>
+                    Além do café, oferecemos um cardápio de delícias caseiras: pães frescos, bolos feitos diariamente e opções saudáveis para acompanhar sua pausa perfeita.
+                    <br>
+                    <br>
+                    Valorizamos a sustentabilidade, usando embalagens ecológicas e apoiando práticas justas de comércio. Icaro's Café é mais que uma cafeteria – é um pedacinho de aconchego no seu dia.
+                </p>
+            </div>
+        </section> <!--interface-->
+
+        <section class="interface2" id="itens-cardapio"> <!--section para tamanho e cores-->
+            <div class="img-cardapio"> <!--div para guardar as imagens juntos-->
+                <button onclick="voltaImg()" id="btn-anterior">&larr;</button>
+                <div id="div-img-produto">
+                    <img id="img-cardapio" src="media/cardapio/expresso.avif" alt="produtos de padaria">
+                    <legend id="nome-produto">Café expresso</legend>
+                </div>
+                <button onclick="avancaImg()" id="btn-proximo">&rarr;</button>
+            </div>
+        </section><!--interface-->
+
+        <section class="interface1" id="interface6"> <!-- interface para definir tamanho e cores-->
+            <div class="endereco"> <!-- div para criar um box onde ficara o texto-->
+                <p class="p-endereco">Descubra onde nos encontrar:</p>
+                <br> <br>
+                <a href="mapa.html"> <!-- link para outra pagina atraves de um icone de mapa inserido com link externo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                </a>
+            </div>
+        </section> <!--interface-->
+        
+    </main> <!--Main-->
+
+    <footer id="footer"> <!--rodapé da pagina, interface para tamanho e cores, titulo e paragrafo com link vazio-->
+        <section class="interface">
+            <h2><a href="#home">Icaro's Café</a></h2>
+            <p>Desenvolvido por <a href="#">Adriano Ocampos</a></p>
+        </section>
+    </footer><!--footer-->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

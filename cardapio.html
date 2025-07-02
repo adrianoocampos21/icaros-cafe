@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio | Icaro's Café</title>
+
+    <style>
+            
+    #header{ /*cabecalho para definir background e altura*/
+        background-image: url(media/copo-cafecompleto.jpg);
+        height: 18vh; 
+    }
+
+    /* INTERFACE1 */
+    #main{ /*definir cor de fundo*/
+        background-color: var(--red);
+    }
+    #main .interface1{ /*definir cor de fundo e largura maxima*/
+        background-color: var(--marrom);
+        max-width: 100%;
+    }
+
+    .tabela-cardapio{ /*definir cor de fundo, cor de texto e alinhamento do texto*/
+        background-color: var(--white);
+        color: var(--black);
+
+        text-align: left;
+    }
+
+    main h3{ /*definir cor de fundo, lagura maxima, centralizar, borda, cor, alinhamento de texto, espacamento interno abaixo, tamanho da fonte */
+        background-color: var(--white);
+        max-width: 300px;
+        margin: auto;
+        border-radius: 10px;
+        color: var(--black);
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+
+    .tabela-cardapio{ /* largura maxima, borda com raio, espacamento interno, centralizar*/
+        max-width: 600px;
+        border-radius: 10px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .tabela-cardapio table, td{ /*borda, alinhar no centro*/
+        border: 1px solid var(--);
+        align-items: center;
+    }
+
+    .tabela-cardapio table{ /*espacamento interno*/
+        padding: 2%;
+    }
+    .tabela-cardapio table tr,td{ /*espacamento interno*/
+        padding: 2px 30px;
+    }
+
+    /* IMG-CARDAPIO */
+
+    #itens-cardapio{ /*cor de fundo*/
+        background-color: var(--black);
+    }
+
+    .img-cardapio{ /*cor de fundo, largura maxima, borda redonda, espacamento, espacamento interno, centralizar, texto no centro*/
+        background-color: var(--black);
+        max-width: 1000px;
+        border-radius: 10px;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .img-cardapio img{ /*largura e altura fixa*/
+        width: 190px;
+        height: 130px;
+    }
+    </style>
+
+</head>
+<body>
+    <header id="header"> <!--cabecalho-->
+        <section class="interface" id="home"> <!--interface  para definir tamanhos e cores-->
+            <div class="flex"> <!--conteudo flexivel-->
+                <div class="logo"> <!--configurar onde fica a logo-->
+                    <a href="#home">
+                        <h1>Icaro's <br>Café</h1>
+                    </a>
+                </div>
+                <nav class="menu-desktop"> <!--menu de navegacao-->
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="cardapio.html">cardápio</a></li>
+                        <li><a href="sobre.html">sobre</a></li>
+                        <li><a href="mais.html">saiba mais</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main id="main"> <!--conteudo principal-->
+        <section class="interface"> <!--interface para definir tamanho e cores-->
+            <h3 id="cardapio">Menu de bebidas</h3> 
+            <div class="tabela-cardapio"> <!--div onde ficara a tabela-->
+                <table class="tb-bebida"> <!--tabela de bebidas-->
+                    <thead>
+                        <th>Bebida</th>
+                        <th></th> <!--usado como espacamento-->
+                        <th></th>
+                        <th>Preço</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Expresso</td>
+                            <td></td> <!--usado como espacamento-->
+                            <td></td>
+                            <td>R$ 3.00</td>
+                        </tr>
+                        <tr>
+                            <td>Capuccino</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 6.00</td>
+                        </tr>
+                        <tr>
+                            <td>Mocaccino</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 9.00</td>
+                        </tr>
+                        <tr>
+                            <td>Água</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 2.50</td>
+                        </tr>
+                        <tr>
+                            <td>Chá</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 4.00</td>
+                        </tr>
+                        <tr>
+                            <td>Kombucha</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 8.25</td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </div>
+        </section> <!--interface-->
+
+        <section class="interface1" id="itens-cardapio"> <!--section para tamanho e cores-->
+            <div class="img-cardapio"> <!--div para guardar as imagens juntos--> 
+                <img src="media/cardapio/expresso.avif" alt="Expresso">
+                <img src="media/cardapio/Cappuccino.jpg" alt="Cappuccino">
+                <img src="media/cardapio/mocaccino.jpg" alt="Mocaccino">
+                <img src="media/cardapio/agua.webp" alt="Água">
+                <img src="media/cardapio/cha.jpg" alt="Chá">
+                <img src="media/cardapio/kombucha.webp" alt="Kombucha">
+            </div>
+        </section><!--interface-->
+
+        <section class="interface">
+            <h3 id="cardapio">Menu de comidas</h3>
+            <div class="tabela-cardapio">
+                <table class="tb-outros">
+                    <thead>
+                        <th>Comida</th>
+                        <td></td> <!--usado como espacamento-->
+                        <td></td>
+                        <th>Preço</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empada</td>
+                            <td></td> <!--usado como espacamento-->
+                            <td></td>
+                            <td>R$ 8.00</td>
+                        </tr>
+                        <tr>
+                            <td>Pastel</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Folhado</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 7.00</td>
+                        </tr>
+                        <tr>
+                            <td>Bolo</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 6.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sanduíche</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 5.50</td>
+                        </tr>
+                        <tr>
+                            <td>Sanduíche Natural</td>
+                            <td></td>
+                            <td></td>
+                            <td>R$ 7.25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--tabela-cardapio-->
+        </section> <!--interface1-->
+
+        <section class="interface1" id="itens-cardapio"> <!--section para tamanho e cores-->
+            <div class="img-cardapio"> <!--div para guardar as imagens juntos-->
+                <img src="media/cardapio/empada.jpg" alt="Empada">
+                <img src="media/cardapio/pastel.jpg" alt="Pastel">
+                <img src="media/cardapio/folhado.webp" alt="Folhado">
+                <img src="media/cardapio/bolo.webp" alt="Bolo">
+                <img src="media/cardapio/sanduiche.webp" alt="Sanduíche">
+                <img src="media/cardapio/sanduiche2.jpg" alt="Sanduíche">
+            </div>
+        </section><!--interface-->
+    </main><!--main-->
+
+    <footer id="footer"> <!--rodape, secao final-->
+        <section class="interface"> <!--definir tamanho e cores-->
+            <h2><a href="#home">Icaro's Café</a></h2>
+            <p>Desenvolvido por <a href="#">Adriano Ocampos</a></p>
+        </section>
+    </footer>
+</body>
+</html>
